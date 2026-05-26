@@ -31,7 +31,7 @@ export default function Impressum() {
       <Link href="/ueber-uns" className="hover:text-[#D4AF37] transition-colors">Über uns</Link>
       <Link href="/aktuelles" className="hover:text-[#D4AF37] transition-colors">Aktuelles</Link>
       <Link href="/#spenden" className="hover:text-[#D4AF37] transition-colors">Spenden</Link>
-      <a href="#kontakt" className="hover:text-[#D4AF37] transition-colors cursor-pointer">Kontakt</a>
+      <Link href="/#kontakt" className="hover:text-[#D4AF37] transition-colors cursor-pointer">Kontakt</Link>
     
     </div>
 
@@ -73,7 +73,7 @@ export default function Impressum() {
 
             <div className="border-t border-slate-100 pt-8">
               <h3 className="font-bold text-emerald-950 uppercase text-xs tracking-wider mb-3">Kontakt</h3>
-              <p>E-Mail: <a href="mailto bangladeshmasjid@gmail.com" className="text-emerald-700 hover:text-[#D4AF37] transition-colors"> bangladeshmasjid@gmail.com</a></p>
+              <p>E-Mail: <a href="mailto:bangladeshmasjid@gmail.com" className="text-emerald-700 hover:text-[#D4AF37] transition-colors"> bangladeshmasjid@gmail.com</a></p>
             </div>
 
             <div className="border-t border-slate-100 pt-8">
@@ -87,10 +87,37 @@ export default function Impressum() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-emerald-950 text-white/40 py-12 text-center text-[10px] uppercase tracking-[0.4em]">
-        &copy; 1999 - 2026 Bangladesh Islamisches Zentrum Stuttgart
-      </footer>
+      <footer id="footer" className="bg-emerald-950 text-white pt-20 pb-10 px-6">
+  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 border-b border-emerald-800 pb-12">
+    <div>
+      <h4 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-6">Rechtlicher Träger</h4>
+      <div className="text-sm text-emerald-100/60 space-y-2">
+        <p className="font-bold text-white text-lg">Bangladesh Islamisches Zentrum e.V.</p>
+        <p>Pfarrstraße 7, 70182 Stuttgart</p>
+      </div>
+    </div>
+    <div>
+      <h4 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-6">Digitale Verwaltung</h4>
+      <p className="text-sm text-emerald-100/60 font-mono">E-Mail: bangladeshmasjid@gmail.com</p>
+    </div>
+  </div>
+
+  {/* RECHTLICHE LINKS & COPYRIGHT */}
+  <div className="max-w-5xl mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+    <div className="text-[9px] text-emerald-500 uppercase tracking-[0.4em]">
+      &copy; 1999 - 2026 Bangladesh Islamisches Zentrum Stuttgart
+    </div>
+    
+    <div className="flex gap-8 text-[10px] uppercase tracking-widest font-bold text-emerald-100/40">
+      <Link href="/datenschutz" className="hover:text-[#D4AF37] transition-colors">
+        Datenschutz
+      </Link>
+      <Link href="/Impressum" className="hover:text-[#D4AF37] transition-colors">
+        Impressum
+      </Link>
+    </div>
+  </div>
+</footer>
     </main>
   );
 }

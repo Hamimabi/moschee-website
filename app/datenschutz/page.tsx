@@ -6,6 +6,7 @@ export default function Datenschutz() {
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
       
       {/* NAVIGATION */}
+{/* NAVIGATION */}
 <nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-[100] shadow-xl border-b-2 border-[#D4AF37]/30 w-full">
   <div className="max-w-7xl mx-auto flex justify-between items-center">
     
@@ -32,16 +33,18 @@ export default function Datenschutz() {
       <Link href="/ueber-uns" className="hover:text-[#D4AF37] transition-colors">Über uns</Link>
       <Link href="/aktuelles" className="hover:text-[#D4AF37] transition-colors">Aktuelles</Link>
       <Link href="/#spenden" className="hover:text-[#D4AF37] transition-colors">Spenden</Link>
-      <Link href="/#kontakt" className="hover:text-[#D4AF37] transition-colors">Kontakt</Link>
-      
+      {/* HIER GEFIXT: Ein sauberer Next.js Link zur Startseite mit ID */}
+      <Link href="/#kontakt" className="hover:text-[#D4AF37] transition-colors">
+        Kontakt
+      </Link>
     </div>
 
-    <a 
-      href="#spenden" 
+    <Link 
+      href="/#spenden" 
       className="bg-[#D4AF37] hover:bg-[#C5A028] text-emerald-950 px-5 py-2 rounded-full font-black text-xs transition-all shadow-md active:scale-95"
     >
       UNTERSTÜTZEN
-    </a>
+    </Link>
   </div>
 </nav>
 
@@ -77,8 +80,9 @@ export default function Datenschutz() {
           {/* 2. HOSTING */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-emerald-900 border-b border-[#D4AF37]/20 pb-2">2. Hosting</h3>
-            <p>Wir hosten die Inhalte unserer Website bei einem externen Anbieter. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.</p>
+            <p>Wir hosten die Inhalte unserer Website bei dem externen Anbieter Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.</p>
             <p>Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Besuchern (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist.</p>
+          
           </div>
 
           {/* 3. PFLICHTINFORMATIONEN */}
@@ -138,9 +142,40 @@ export default function Datenschutz() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-emerald-950 text-white/40 py-12 text-center text-[10px] uppercase tracking-[0.4em]">
-        &copy; 1999 - 2026 Bangladesh Islamisches Zentrum Stuttgart
+      {/* ABSTAND ZWISCHEN WEISSEM KASTEN UND FOOTER */}
+      <div className="h-16"></div>
+
+     {/* FOOTER */}
+     <footer id="footer" className="bg-emerald-950 text-white pt-20 pb-10 px-6 mt-auto">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 border-b border-emerald-800 pb-12">
+          <div>
+            <h4 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-6">Rechtlicher Träger</h4>
+            <div className="text-sm text-emerald-100/60 space-y-2">
+              <p className="font-bold text-white text-lg">Bangladesh Islamisches Zentrum e.V.</p>
+              <p>Pfarrstraße 7, 70182 Stuttgart</p>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-6">Digitale Verwaltung</h4>
+            <p className="text-sm text-emerald-100/60 font-mono">E-Mail: bangladeshmasjid@gmail.com</p>
+          </div>
+        </div>
+
+        {/* RECHTLICHE LINKS & COPYRIGHT */}
+        <div className="max-w-5xl mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-[9px] text-emerald-500 uppercase tracking-[0.4em]">
+            &copy; 1999 - 2026 Bangladesh Islamisches Zentrum Stuttgart
+          </div>
+          
+          <div className="flex gap-8 text-[10px] uppercase tracking-widest font-bold text-emerald-100/40">
+            <Link href="/datenschutz" className="hover:text-[#D4AF37] transition-colors">
+              Datenschutz
+            </Link>
+            <Link href="/Impressum" className="hover:text-[#D4AF37] transition-colors">
+              Impressum
+            </Link>
+          </div>
+        </div>
       </footer>
     </main>
   );
