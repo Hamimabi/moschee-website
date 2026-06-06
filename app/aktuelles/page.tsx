@@ -6,7 +6,7 @@ export default function Aktuelles() {
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
       
       {/* NAVIGATION */}
-      <nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-50 shadow-xl border-b-2 border-[#D4AF37]/30">
+      <nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-[100] shadow-xl border-b-2 border-[#D4AF37]/30 w-full pt-[env(safe-area-inset-top)]">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           
           <Link href="/" className="flex items-center gap-4 group cursor-pointer">

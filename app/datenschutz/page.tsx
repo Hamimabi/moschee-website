@@ -7,7 +7,7 @@ export default function Datenschutz() {
       
       {/* NAVIGATION */}
 {/* NAVIGATION */}
-<nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-[100] shadow-xl border-b-2 border-[#D4AF37]/30 w-full">
+<nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-[100] shadow-xl border-b-2 border-[#D4AF37]/30 w-full pt-[env(safe-area-inset-top)]">
   <div className="max-w-7xl mx-auto flex justify-between items-center">
     
     {/* KLICKBARER HOME-BEREICH (LOGO + NAME) */}

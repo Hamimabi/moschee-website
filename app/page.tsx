@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
       
-     {/* NAVIGATION */}
-<nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-[100] shadow-xl border-b-2 border-[#D4AF37]/30 w-full">
+     {/* NAVIGATION (Gefixed für Verlinkung zur Startseite) */}
+     <nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-[100] shadow-xl border-b-2 border-[#D4AF37]/30 w-full pt-[env(safe-area-inset-top)]">
   <div className="max-w-7xl mx-auto flex justify-between items-center">
     
-    {/* KLICKBARER HOME-BEREICH (LOGO + NAME) */}
+    {/* KLICKBARER HOME-BEREICH */}
     <Link href="/" className="flex items-center gap-4 group cursor-pointer">
       <img 
         src="/moscheelogo2.png" 
@@ -28,22 +28,25 @@ export default function Home() {
       </div>
     </Link>
 
-    {/* NAVIGATION LINKS */}
+    {/* NAVIGATION LINKS - Jetzt mit Pfaden zur Startseite */}
     <div className="hidden lg:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-white/70">
       <Link href="/" className="hover:text-[#D4AF37] transition-colors">Startseite</Link>
       <Link href="/ueber-uns" className="hover:text-[#D4AF37] transition-colors">Über uns</Link>
       <Link href="/aktuelles" className="hover:text-[#D4AF37] transition-colors">Aktuelles</Link>
-      <Link href="/#spenden" className="hover:text-[#D4AF37] transition-colors">Spenden</Link>
-      <a href="#kontakt" className="hover:text-[#D4AF37] transition-colors cursor-pointer">Kontakt</a>
-    
+       <Link href="/#spenden" className="hover:text-[#D4AF37] transition-colors">Spenden</Link>
+      <Link href="/#kontakt" className="hover:text-[#D4AF37] transition-colors">Kontakt</Link>
+      
+      
+
     </div>
 
-    <a 
-      href="#spenden" 
+    {/* DER UNTERSTÜTZEN BUTTON */}
+    <Link 
+      href="/#spenden" 
       className="bg-[#D4AF37] hover:bg-[#C5A028] text-emerald-950 px-5 py-2 rounded-full font-black text-xs transition-all shadow-md active:scale-95"
     >
       UNTERSTÜTZEN
-    </a>
+    </Link>
   </div>
 </nav>
       {/* DYNAMISCHER HERO-BEREICH: SLIDER & NEWS-SPLIT */}
