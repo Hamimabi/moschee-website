@@ -100,7 +100,7 @@ export default function Aktuelles() {
           {/* Bild 2 */}
           <div className="snap-center shrink-0 w-[85vw] md:w-[400px]">
             <img src="/wudubereichneu.jpg" alt="Neueer Wudu-Bereich" className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-md border border-slate-200" />
-            <p className="mt-3 text-sm font-bold text-slate-700 px-2">DerWudu-Bereich wurde renoviert</p>
+            <p className="mt-3 text-sm font-bold text-slate-700 px-2">Der Wudu-Bereich wurde renoviert</p>
           </div>
 
           {/* Bild 3 */}
