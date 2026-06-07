@@ -24,3 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Handy-Optimierung: Platzhalter für den Notch/System-Leiste */
+@layer base {
+  body {
+    /* Setzt einen minimalen Abstand oben, falls das Element "fixed" ist */
+    padding-top: env(safe-area-inset-top);
+  }
+}

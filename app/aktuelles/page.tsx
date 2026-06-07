@@ -60,7 +60,7 @@ export default function Aktuelles() {
           
           <div className="bg-white p-4 rounded-[30px] shadow-xl border border-slate-200">
             <img 
-              src="/Renovierungsflyer1.jpg" 
+              src="/Renovierungflyer2.jpg" 
               alt="Renovierung Flyer" 
               className="w-full h-auto rounded-2xl object-cover"
             />
@@ -97,22 +97,20 @@ export default function Aktuelles() {
             <img src="/Kücheneu.jpg" alt="Neue Küche" className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-md border border-slate-200" />
             <p className="mt-3 text-sm font-bold text-slate-700 px-2">Die neue Küche ist eingebaut</p>
           </div>
-
-          {/*{/* Bild 2 (Platzhalter - Bitte Namen anpassen) 
+          {/* Bild 2 */}
           <div className="snap-center shrink-0 w-[85vw] md:w-[400px]">
-            <div className="w-full h-[250px] md:h-[300px] bg-slate-200 rounded-3xl shadow-md border border-slate-300 flex items-center justify-center text-slate-400">
-              [Bild 2 einfügen]
-            </div>
-            <p className="mt-3 text-sm font-bold text-slate-700 px-2"> die Wände sind gestrichen</p>
-          </div> */}
+            <img src="/wudubereichneu.jpg" alt="Neueer Wudu-Bereich" className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-md border border-slate-200" />
+            <p className="mt-3 text-sm font-bold text-slate-700 px-2">DerWudu-Bereich wurde renoviert</p>
+          </div>
 
-          {/* Bild 3 (Platzhalter) 
+          {/* Bild 3 */}
           <div className="snap-center shrink-0 w-[85vw] md:w-[400px]">
-             <div className="w-full h-[250px] md:h-[300px] bg-slate-200 rounded-3xl shadow-md border border-slate-300 flex items-center justify-center text-slate-400">
-              [Bild 3 einfügen]
-            </div>
-            <p className="mt-3 text-sm font-bold text-slate-700 px-2">Weitere Updates folgen...</p>
-          </div> */}
+            <img src="/eingangneu.jpg" alt="Neuer Flur" className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-md border border-slate-200" />
+            <p className="mt-3 text-sm font-bold text-slate-700 px-2"> Der neue Boden wurde gelegt</p>
+          </div>
+
+
+          
 
         </div>
       </section>
@@ -138,7 +136,7 @@ export default function Aktuelles() {
     
     {/* HIER WAR VORHER DER KOMMENTAR DRUM – JETZT IST ER WEG: */}
     <img 
-      src="/geplanter_bereich.jpg" 
+      src="/moscheeinnenneu.jpg" 
       alt="Geplanter Gebetsraum" 
       className="w-full h-full object-cover" 
     />
