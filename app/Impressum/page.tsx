@@ -1,123 +1,58 @@
-import React from 'react';
-import Link from 'next/link';
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
 
 export default function Impressum() {
   return (
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      
-      {/* NAVIGATION - EXAKT WIE AUF DER DATENSCHUTZ SEITE */}
-      <nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-[100] shadow-xl border-b-2 border-[#D4AF37]/30 w-full pt-[env(safe-area-inset-top)]">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          
-          <Link href="/" className="flex items-center gap-4 group cursor-pointer">
-            <img 
-              src="/moscheelogo2.png" 
-              alt="Logo BIZ Stuttgart" 
-              className="w-12 h-12 md:w-16 md:h-16 object-contain transition-transform group-hover:scale-105" 
-            />
-            <div className="flex flex-col">
-              <h1 className="text-lg md:text-xl tracking-tight leading-tight text-[#D4AF37] group-hover:text-[#f2d06b] transition-colors" style={{ fontFamily: 'serif' }}>
-                BANGLADESCH <br className="md:hidden" /> ISLAMISCHES ZENTRUM e.V
-              </h1>
-              <span className="text-[9px] tracking-widest opacity-80 uppercase font-bold text-white group-hover:opacity-100 transition-opacity">
-                BIZ Stuttgart • Seit 1999
-              </span>
-            </div>
-          </Link>
+      <SiteHeader />
 
-           {/* NAVIGATION LINKS */}
-    <div className="hidden lg:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-white/70">
-      <Link href="/" className="hover:text-[#D4AF37] transition-colors">Startseite</Link>
-      <Link href="/ueber-uns" className="hover:text-[#D4AF37] transition-colors">Über uns</Link>
-      <Link href="/aktuelles" className="hover:text-[#D4AF37] transition-colors">Aktuelles</Link>
-      <Link href="/#spenden" className="hover:text-[#D4AF37] transition-colors">Spenden</Link>
-      <Link href="/#kontakt" className="hover:text-[#D4AF37] transition-colors cursor-pointer">Kontakt</Link>
-    
-    </div>
-
-          <Link 
-            href="/#spenden" 
-            className="bg-[#D4AF37] hover:bg-[#C5A028] text-emerald-950 px-5 py-2 rounded-full font-black text-xs transition-all shadow-md active:scale-95"
-          >
-            UNTERSTÜTZEN
-          </Link>
-        </div>
-      </nav>
-
-      {/* HEADER BEREICH */}
-      <section className="bg-emerald-950 text-white py-16 px-6 text-center">
-        <h2 className="text-[#D4AF37] text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-4" style={{ fontFamily: 'serif' }}>
+      <section className="bg-emerald-950 px-6 py-16 text-center text-white">
+        <h1 className="mb-4 text-3xl font-bold uppercase tracking-tight text-[#D4AF37] md:text-5xl font-serif">
           Impressum
-        </h2>
-        <p className="max-w-2xl mx-auto text-emerald-100/80 text-sm">
-          Gesetzliche Pflichtangaben nach § 5 TMG
-        </p>
+        </h1>
+        <p className="mx-auto max-w-2xl text-sm text-emerald-100/80">Gesetzliche Pflichtangaben nach § 5 TMG</p>
       </section>
 
-      {/* TEXTINHALT */}
-      <section className="py-12 px-6 max-w-4xl mx-auto -mt-10">
-        <div className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl border border-slate-100 space-y-12 text-sm text-slate-700 leading-relaxed">
-          
-          <div className="space-y-8">
-            <div>
-              <h3 className="font-bold text-emerald-950 uppercase text-xs tracking-wider mb-3">Angaben gemäß § 5 TMG</h3>
-              <p className="font-bold text-lg text-emerald-900 mb-1">Bangladesch Islamisches Zentrum e.V.</p>
-              <p>Pfarrstraße 7</p>
-              <p>70182 Stuttgart</p>
-            </div>
-
-            <div className="border-t border-slate-100 pt-8">
-              <h3 className="font-bold text-emerald-950 uppercase text-xs tracking-wider mb-3">Vertreten durch</h3>
-              <p>Den Vorstand</p>
-            </div>
-
-            <div className="border-t border-slate-100 pt-8">
-              <h3 className="font-bold text-emerald-950 uppercase text-xs tracking-wider mb-3">Kontakt</h3>
-              <p>E-Mail: <a href="mailto:bangladeshmasjid@gmail.com" className="text-emerald-700 hover:text-[#D4AF37] transition-colors"> bangladeshmasjid@gmail.com</a></p>
-            </div>
-
-            <div className="border-t border-slate-100 pt-8">
-              <h3 className="font-bold text-emerald-950 uppercase text-xs tracking-wider mb-3">Registereintrag</h3>
-              <p>Eintragung im Vereinsregister.</p>
-              <p>Registergericht: Amtsgericht Stuttgart</p>
-              <p>Registernummer: <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded font-mono text-xs">6377</span></p>
-            </div>
+      <section className="mx-auto -mt-10 max-w-4xl px-6 py-12">
+        <div className="space-y-10 rounded-2xl border border-slate-100 bg-white p-6 text-sm leading-relaxed text-slate-700 shadow-xl md:p-12">
+          <div>
+            <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-emerald-950">Angaben gemäß § 5 TMG</h2>
+            <p className="mb-1 text-lg font-bold text-emerald-900">Bangladesch Islamisches Zentrum e.V.</p>
+            <p>Pfarrstraße 7</p>
+            <p>70182 Stuttgart</p>
           </div>
 
+          <div className="border-t border-slate-100 pt-8">
+            <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-emerald-950">Vertreten durch</h2>
+            <p>Den Vorstand</p>
+          </div>
+
+          <div className="border-t border-slate-100 pt-8">
+            <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-emerald-950">Kontakt</h2>
+            <p>
+              E-Mail:{" "}
+              <a
+                href="mailto:bangladeshmasjid@gmail.com"
+                className="break-words text-emerald-700 transition-colors hover:text-[#D4AF37]"
+              >
+                bangladeshmasjid@gmail.com
+              </a>
+            </p>
+          </div>
+
+          <div className="border-t border-slate-100 pt-8">
+            <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-emerald-950">Registereintrag</h2>
+            <p>Eintragung im Vereinsregister.</p>
+            <p>Registergericht: Amtsgericht Stuttgart</p>
+            <p>
+              Registernummer:{" "}
+              <span className="rounded bg-orange-100 px-2 py-1 font-mono text-xs text-orange-800">6377</span>
+            </p>
+          </div>
         </div>
       </section>
 
-      <footer id="footer" className="bg-emerald-950 text-white pt-20 pb-10 px-6">
-  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 border-b border-emerald-800 pb-12">
-    <div>
-      <h4 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-6">Rechtlicher Träger</h4>
-      <div className="text-sm text-emerald-100/60 space-y-2">
-        <p className="font-bold text-white text-lg">Bangladesh Islamisches Zentrum e.V.</p>
-        <p>Pfarrstraße 7, 70182 Stuttgart</p>
-      </div>
-    </div>
-    <div>
-      <h4 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-6">Digitale Verwaltung</h4>
-      <p className="text-sm text-emerald-100/60 font-mono">E-Mail: bangladeshmasjid@gmail.com</p>
-    </div>
-  </div>
-
-  {/* RECHTLICHE LINKS & COPYRIGHT */}
-  <div className="max-w-5xl mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-    <div className="text-[9px] text-emerald-500 uppercase tracking-[0.4em]">
-      &copy; 1999 - 2026 Bangladesh Islamisches Zentrum Stuttgart
-    </div>
-    
-    <div className="flex gap-8 text-[10px] uppercase tracking-widest font-bold text-emerald-100/40">
-      <Link href="/datenschutz" className="hover:text-[#D4AF37] transition-colors">
-        Datenschutz
-      </Link>
-      <Link href="/Impressum" className="hover:text-[#D4AF37] transition-colors">
-        Impressum
-      </Link>
-    </div>
-  </div>
-</footer>
+      <SiteFooter />
     </main>
   );
 }

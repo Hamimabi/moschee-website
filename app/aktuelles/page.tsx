@@ -1,189 +1,110 @@
-import React from 'react';
-import Link from 'next/link';
+import Image from "next/image";
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
+
+const progressImages = [
+  { src: "/Kücheneu.jpg", alt: "Neue Küche", caption: "Die neue Küche ist eingebaut" },
+  { src: "/wudubereichneu.jpg", alt: "Neuer Wudu-Bereich", caption: "Der Wudu-Bereich wurde renoviert" },
+  { src: "/Toiletteneu2.jpeg", alt: "Neue Toilette", caption: "Die Toiletten wurden erneuert" },
+  { src: "/eingangneu.jpg", alt: "Neuer Flur", caption: "Der neue Boden wurde gelegt" },
+];
 
 export default function Aktuelles() {
   return (
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      
-      {/* NAVIGATION */}
-      <nav className="bg-[#064e3b] text-white p-4 sticky top-0 z-[100] shadow-xl border-b-2 border-[#D4AF37]/30 w-full pt-[env(safe-area-inset-top)]">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          
-          <Link href="/" className="flex items-center gap-4 group cursor-pointer">
-            <img 
-              src="/moscheelogo2.png" 
-              alt="Logo BIZ Stuttgart" 
-              className="w-12 h-12 md:w-16 md:h-16 object-contain transition-transform group-hover:scale-105" 
-            />
-            <div className="flex flex-col">
-              <h1 className="text-lg md:text-xl tracking-tight leading-tight text-[#D4AF37] group-hover:text-[#f2d06b] transition-colors" style={{ fontFamily: 'serif' }}>
-                BANGLADESCH <br className="md:hidden" /> ISLAMISCHES ZENTRUM e.V
-              </h1>
-              <span className="text-[9px] tracking-widest opacity-80 uppercase font-bold text-white group-hover:opacity-100 transition-opacity">
-                BIZ Stuttgart • Seit 1999
-              </span>
-            </div>
-          </Link>
+      <SiteHeader />
 
-           {/* NAVIGATION LINKS */}
-    <div className="hidden lg:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-white/70">
-      <Link href="/" className="hover:text-[#D4AF37] transition-colors">Startseite</Link>
-      <Link href="/ueber-uns" className="hover:text-[#D4AF37] transition-colors">Über uns</Link>
-      <Link href="/aktuelles" className="hover:text-[#D4AF37] transition-colors">Aktuelles</Link>
-      <Link href="/#spenden" className="hover:text-[#D4AF37] transition-colors">Spenden</Link>
-      <a href="#kontakt" className="hover:text-[#D4AF37] transition-colors cursor-pointer">Kontakt</a>
-    
-    </div>
-
-          <Link 
-            href="/#spenden" 
-            className="bg-[#D4AF37] hover:bg-[#C5A028] text-emerald-950 px-5 py-2 rounded-full font-black text-xs transition-all shadow-md active:scale-95"
-          >
-            UNTERSTÜTZEN
-          </Link>
-        </div>
-      </nav>
-
-      {/* HEADER BEREICH */}
-      <section className="bg-emerald-950 text-white py-16 px-6 text-center">
-        <h2 className="text-[#D4AF37] text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-4" style={{ fontFamily: 'serif' }}>
+      <section className="bg-emerald-950 px-6 py-16 text-center text-white">
+        <h1 className="mb-4 text-3xl font-bold uppercase tracking-tight text-[#D4AF37] md:text-5xl font-serif">
           Aktuelles & Renovierung
-        </h2>
-        <p className="max-w-2xl mx-auto text-emerald-100/80 text-lg">
-          
-        </p>
+        </h1>
       </section>
 
-      {/* INFO-TEXT ZUR RENOVIERUNG & FLYER */}
-      <section className="py-12 px-6 max-w-5xl mx-auto -mt-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          
-          <div className="bg-white p-4 rounded-[30px] shadow-xl border border-slate-200">
-            <img 
-              src="/Renovierungflyer2.jpg" 
-              alt="Renovierung Flyer" 
-              className="w-full h-auto rounded-2xl object-cover"
+      <section className="mx-auto -mt-8 max-w-5xl px-6 py-12">
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-lg">
+            <Image
+              src="/Moscheeflyer3.jpeg"
+              alt="Aktueller Moschee Flyer"
+              width={900}
+              height={1200}
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="h-auto w-full rounded-xl object-cover"
             />
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-emerald-900 uppercase tracking-tight">
+            <h2 className="text-2xl font-bold uppercase tracking-tight text-emerald-900">
               Schritt für Schritt ins neue Zuhause
-            </h3>
-            <p className="text-slate-600 leading-relaxed text-sm">
-              Alhamdulillah, die Arbeiten an unserer Moschee haben begonnen. Unser Ziel ist es, unsere Moschee in ein modernen und einladenden Ort  zu verwandeln - einen Ort in der unsere Gemeinschaft zusammenkommt und ihren Glauben praktiziert. In den kommnenden Monaten werden wir hier regelmäßig Updates veröffentlichen.
+            </h2>
+            <p className="text-sm leading-relaxed text-slate-600">
+              Alhamdulillah, die Arbeiten an unserer Moschee haben begonnen. Unser Ziel ist es, unsere Moschee in einen
+              modernen und einladenden Ort zu verwandeln - einen Ort, an dem unsere Gemeinschaft zusammenkommt und ihren
+              Glauben praktiziert. In den kommenden Monaten veröffentlichen wir hier regelmäßig Updates.
             </p>
-            <div className="bg-orange-50 border-l-4 border-[#D4AF37] p-5 rounded-r-2xl shadow-sm text-sm text-slate-700">
-              <strong className="text-emerald-950 block mb-2">⚠️ Wichtiger Hinweis zur Umsetzung</strong>
-              Alle Fortschritte hängen maßgeblich von den eingehenden Spenden ab. Da unsere Helfer diese Aufgabe ehrenamtlich neben Beruf und Studium übernehmen, bitten wir um Geduld, falls bestimmte Bauphasen etwas mehr Zeit in Anspruch nehmen. Baraka Allahu Feekum für eure stetige Unterstützung!
+            <div className="rounded-r-2xl border-l-4 border-[#D4AF37] bg-orange-50 p-5 text-sm text-slate-700 shadow-sm">
+              <strong className="mb-2 block text-emerald-950">Wichtiger Hinweis zur Umsetzung</strong>
+              Alle Fortschritte hängen maßgeblich von den eingehenden Spenden ab. Da unsere Helfer diese Aufgabe
+              ehrenamtlich neben Beruf und Studium übernehmen, bitten wir um Geduld, falls bestimmte Bauphasen etwas
+              mehr Zeit in Anspruch nehmen.
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* 1. SWIPE-GALERIE: AKTUELLE FORTSCHRITTE */}
-      <section className="py-10 pl-6 lg:pl-0 max-w-5xl mx-auto overflow-hidden">
-        <div className="flex items-center gap-4 mb-6 pr-6 lg:pr-0">
-          <h3 className="text-2xl font-bold text-emerald-900 uppercase tracking-tight">Aktuelle Fortschritte</h3>
-          <div className="h-[2px] bg-[#D4AF37]/30 flex-grow"></div>
+      <section className="mx-auto max-w-5xl overflow-hidden py-10 pl-6 lg:pl-0">
+        <div className="mb-6 flex items-center gap-4 pr-6 lg:pr-0">
+          <h2 className="text-2xl font-bold uppercase tracking-tight text-emerald-900">Aktuelle Fortschritte</h2>
+          <div className="h-px flex-grow bg-[#D4AF37]/30" />
         </div>
-        
-        {/* SWIPE CONTAINER */}
-        <div className="flex overflow-x-auto gap-4 pb-6 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden" style={{ scrollbarWidth: 'none' }}>
-          
-          {/* Bild 1 */}
-          <div className="snap-center shrink-0 w-[85vw] md:w-[400px]">
-            <img src="/Kücheneu.jpg" alt="Neue Küche" className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-md border border-slate-200" />
-            <p className="mt-3 text-sm font-bold text-slate-700 px-2">Die neue Küche ist eingebaut</p>
-          </div>
-          {/* Bild 2 */}
-          <div className="snap-center shrink-0 w-[85vw] md:w-[400px]">
-            <img src="/wudubereichneu.jpg" alt="Neueer Wudu-Bereich" className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-md border border-slate-200" />
-            <p className="mt-3 text-sm font-bold text-slate-700 px-2">Der Wudu-Bereich wurde renoviert</p>
-          </div>
 
-          {/* Bild 3 */}
-          <div className="snap-center shrink-0 w-[85vw] md:w-[400px]">
-            <img src="/eingangneu.jpg" alt="Neuer Flur" className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-md border border-slate-200" />
-            <p className="mt-3 text-sm font-bold text-slate-700 px-2"> Der neue Boden wurde gelegt</p>
-          </div>
-
-
-          
-
+        {/* Mobile Swipe-Galerie: Karten bleiben breit genug zum Anschauen und rutschen horizontal. */}
+        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {progressImages.map((image) => (
+            <article key={image.src} className="w-[85vw] shrink-0 snap-center md:w-[400px]">
+              <div className="relative h-[250px] overflow-hidden rounded-2xl border border-slate-200 shadow-md md:h-[300px]">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 768px) 400px, 85vw"
+                  className="object-cover"
+                />
+              </div>
+              <p className="mt-3 px-2 text-sm font-bold text-slate-700">{image.caption}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* 2. SWIPE-GALERIE: VISION / KI BILDER */}
-      <section className="py-10 pl-6 lg:pl-0 max-w-5xl mx-auto overflow-hidden mb-10">
-        <div className="flex items-center gap-4 mb-2 pr-6 lg:pr-0">
-          <h3 className="text-2xl font-bold text-slate-800 uppercase tracking-tight">Unsere Vision (Grob Geplant)</h3>
-          <div className="h-[2px] bg-slate-300 flex-grow"></div>
+      <section className="mx-auto mb-10 max-w-5xl overflow-hidden py-10 pl-6 lg:pl-0">
+        <div className="mb-2 flex items-center gap-4 pr-6 lg:pr-0">
+          <h2 className="text-2xl font-bold uppercase tracking-tight text-slate-800">Unsere Vision</h2>
+          <div className="h-px flex-grow bg-slate-300" />
         </div>
-        
-        {/* RECHTLICHER HINWEIS KI */}
-        <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-6 pr-6 lg:pr-0">
-          Rechtlicher Hinweis: Die folgenden Bilder sind KI-generierte Visualisierungen zur Veranschaulichung. Die tatsächliche bauliche Umsetzung kann in Material und Design abweichen.
+        <p className="mb-6 pr-6 text-[10px] font-bold uppercase tracking-widest text-slate-400 lg:pr-0">
+          Rechtlicher Hinweis: Die folgenden Bilder sind KI-generierte Visualisierungen zur Veranschaulichung. Die
+          tatsächliche bauliche Umsetzung kann in Material und Design abweichen.
         </p>
-        
-        {/* SWIPE CONTAINER */}
-        <div className="flex overflow-x-auto gap-4 pb-6 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden" style={{ scrollbarWidth: 'none' }}>
-          
-          {/* KI Bild 1 (Minimalistisch, greige/Holz) */}
-<div className="snap-center shrink-0 w-[85vw] md:w-[400px]">
-  <div className="w-full h-[250px] md:h-[300px] bg-emerald-50 rounded-3xl shadow-md border border-emerald-100 relative overflow-hidden">
-    
-    {/* HIER WAR VORHER DER KOMMENTAR DRUM – JETZT IST ER WEG: */}
-    <img 
-      src="/moscheeinnenneu.jpg" 
-      alt="Geplanter Gebetsraum" 
-      className="w-full h-full object-cover" 
-    />
 
-  </div>
-  <p className="mt-3 text-sm font-bold text-slate-700 px-2">Geplanter Gebetsraum</p>
-</div>
-
-         
-
-          
-
+        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <article className="w-[85vw] shrink-0 snap-center md:w-[400px]">
+            <div className="relative h-[250px] overflow-hidden rounded-2xl border border-emerald-100 bg-emerald-50 shadow-md md:h-[300px]">
+              <Image
+                src="/moscheeinnenneu.jpg"
+                alt="Geplanter Gebetsraum"
+                fill
+                sizes="(min-width: 768px) 400px, 85vw"
+                className="object-cover"
+              />
+            </div>
+            <p className="mt-3 px-2 text-sm font-bold text-slate-700">Geplanter Gebetsraum</p>
+          </article>
         </div>
       </section>
 
-      {/* FOOTER MIT LINKS */}
-      <footer id="footer" className="bg-emerald-950 text-white pt-20 pb-10 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 border-b border-emerald-800 pb-12">
-          <div>
-            <h4 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-6">Rechtlicher Träger</h4>
-            <div className="text-sm text-emerald-100/60 space-y-2">
-              <p className="font-bold text-white text-lg">Bangladesh Islamisches Zentrum e.V.</p>
-              <p>Pfarrstraße 7, 70182 Stuttgart</p>
-            </div>
-          </div>
-          <div>
-            <h4 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-6">Digitale Verwaltung</h4>
-            <p className="text-sm text-emerald-100/60 font-mono">E-Mail:bangladeshmasjid@gmail.com</p>
-          </div>
-        </div>
-
-        {/* RECHTLICHE LINKS & COPYRIGHT */}
-        <div className="max-w-5xl mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-[9px] text-emerald-500 uppercase tracking-[0.4em]">
-            &copy; 1999 - 2026 Bangladesh Islamisches Zentrum Stuttgart
-          </div>
-          
-          <div className="flex gap-8 text-[10px] uppercase tracking-widest font-bold text-emerald-100/40">
-            <Link href="/datenschutz" className="hover:text-[#D4AF37] transition-colors">
-              Datenschutz
-            </Link>
-            <Link href="/impressum" className="hover:text-[#D4AF37] transition-colors">
-              Impressum
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
