@@ -3,7 +3,7 @@ import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 
 const progressImages = [
-  { src: "/Kücheneu.jpg", alt: "Neue Küche", caption: "Die neue Küche ist eingebaut" },
+  { src: "/kuecheneu.jpg", alt: "Neue Küche", caption: "Die neue Küche ist eingebaut" },
   { src: "/wudubereichneu.jpg", alt: "Neuer Wudu-Bereich", caption: "Der Wudu-Bereich wurde renoviert" },
   { src: "/Toiletteneu2.jpeg", alt: "Neue Toilette", caption: "Die Toiletten wurden erneuert" },
   { src: "/eingangneu.jpg", alt: "Neuer Flur", caption: "Der neue Boden wurde gelegt" },
