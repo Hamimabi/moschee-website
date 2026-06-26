@@ -51,8 +51,8 @@ export default function Home() {
               </h1>
               <p className="text-sm font-medium text-emerald-900/80">Wir gestalten das BIZ Stuttgart neu.</p>
               <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                Helfen Sie uns, unseren Gebetssaal und die Waschräume für die Zukunft zu rüsten. Jeder Beitrag sichert
-                den Fortbestand unserer Moschee.
+                Ein Bauvertrag wurde geschlossen, sodass wir die Renovierung umfangreicher fortsetzen können als
+                ursprünglich geplant. Weitere Einblicke und aktuelle Informationen folgen in den kommenden Tagen.
               </p>
             </div>
 
