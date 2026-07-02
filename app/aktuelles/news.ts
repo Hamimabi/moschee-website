@@ -29,7 +29,7 @@ export const newsItems: NewsItem[] = [
       { src: "/FlurNeu.jpeg", alt: "Aktueller Flurbereich der Moschee" },
       { src: "/wudubereichneu.jpeg", alt: "Aktueller Waschbereich der Moschee" },
       { src: "/Toiletteneu2.jpeg", alt: "Aktueller Sanitärbereich der Moschee" },
-      { src: "/KücheNeu2.jpeg", alt: "Aktueller Küchenbereich der Moschee" },
+      { src: "/KuecheNeu2.jpeg", alt: "Aktueller Küchenbereich der Moschee" },
     ],
     body: [
       "Die Renovierung der Moschee wird nach der erweiterten Planung fortgesetzt. Durch den geschlossenen Bauvertrag können zusätzliche Arbeiten umgesetzt werden, die über den ursprünglichen Umfang hinausgehen.",
