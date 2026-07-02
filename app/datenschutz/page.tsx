@@ -1,3 +1,4 @@
+import PageHero from "../components/PageHero";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 
@@ -6,18 +7,15 @@ export default function Datenschutz() {
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
       <SiteHeader />
 
-      <section className="bg-emerald-950 px-4 py-16 text-center text-white sm:px-6">
-        <h1 className="mb-4 break-words text-2xl font-bold uppercase tracking-tight text-[#D4AF37] sm:text-3xl md:text-5xl font-serif">
-          Datenschutzerklärung
-        </h1>
-        <p className="mx-auto max-w-2xl text-sm text-emerald-100/80">
-          Informationen zum Umgang mit Ihren personenbezogenen Daten gemäß DSGVO.
-        </p>
-      </section>
+      <PageHero
+        eyebrow="Rechtliches"
+        title="Datenschutzerklärung"
+        description="Informationen zum Umgang mit Ihren personenbezogenen Daten gemäß DSGVO."
+      />
 
       <section className="mx-auto -mt-10 max-w-4xl px-3 py-12 sm:px-6">
         {/* Lange deutsche Rechtsbegriffe dürfen auf kleinen Bildschirmen umbrechen. */}
-        <div className="space-y-10 rounded-2xl border border-slate-100 bg-white p-4 text-sm leading-relaxed text-slate-700 shadow-xl [overflow-wrap:anywhere] sm:p-6 md:p-12">
+        <div className="space-y-10 rounded-lg border border-slate-100 bg-white p-4 text-sm leading-relaxed text-slate-700 shadow-sm [overflow-wrap:anywhere] sm:p-6 md:p-12">
           <section className="space-y-4">
             <h2 className="border-b border-[#D4AF37]/20 pb-2 text-xl font-bold text-emerald-900 sm:text-2xl">
               1. Datenschutz auf einen Blick
@@ -59,7 +57,7 @@ export default function Datenschutz() {
               3. Pflichtinformationen
             </h2>
             <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-950">Verantwortliche Stelle</h3>
-            <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
+            <div className="rounded-lg border border-slate-100 bg-slate-50 p-5">
               <p className="font-bold text-emerald-900">Bangladesch Islamisches Zentrum e.V.</p>
               <p>Pfarrstraße 7</p>
               <p>70182 Stuttgart</p>

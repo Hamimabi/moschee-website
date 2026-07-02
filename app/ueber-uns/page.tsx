@@ -1,3 +1,4 @@
+import PageHero from "../components/PageHero";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 
@@ -8,14 +9,14 @@ export default function UeberUns() {
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
       <SiteHeader />
 
-      <section className="bg-emerald-950 px-6 py-16 text-center text-white md:py-20">
-        <h1 className="mb-4 text-4xl font-bold uppercase tracking-tight text-[#D4AF37] md:text-6xl font-serif">
-          Über uns
-        </h1>
-      </section>
+      <PageHero
+        eyebrow="Über uns"
+        title="Bangladesh Islamisches Zentrum Stuttgart"
+        description="Ein Ort des Gebets, der Gemeinschaft und der Begegnung im Herzen von Stuttgart."
+      />
 
       <section className="mx-auto -mt-10 max-w-5xl px-6 py-12">
-        <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-xl md:p-12">
+        <div className="rounded-lg border border-slate-100 bg-white p-6 shadow-sm md:p-12">
           <div className="grid gap-10 md:grid-cols-2 md:gap-12">
             <div className="space-y-6">
               <h2 className="border-b-2 border-[#D4AF37]/20 pb-2 text-2xl font-bold uppercase tracking-tight text-emerald-900">
@@ -25,7 +26,7 @@ export default function UeberUns() {
                 Das Bangladesh Islamische Zentrum e.V. ist seit 1999 eine feste Institution in Stuttgart. Trotz unseres
                 Namens sind wir eine hochgradig multikulturelle Gemeinschaft.
               </p>
-              <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5 md:p-6">
+              <div className="rounded-lg border border-emerald-100 bg-emerald-50 p-5 md:p-6">
                 <h3 className="mb-2 text-sm font-bold uppercase tracking-wide text-emerald-900">
                   Sprache & Verständlichkeit
                 </h3>
@@ -49,11 +50,11 @@ export default function UeberUns() {
                 Stuttgart zwei Freitagsgebete an:
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-center">
                   <span className="block text-[10px] font-bold uppercase text-slate-400">1. Jumu&apos;ah</span>
                   <span className="text-2xl font-black text-emerald-900">14:00</span>
                 </div>
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-center">
                   <span className="block text-[10px] font-bold uppercase text-slate-400">2. Jumu&apos;ah</span>
                   <span className="text-2xl font-black text-[#D4AF37]">15:00</span>
                 </div>
@@ -76,7 +77,7 @@ export default function UeberUns() {
             </div>
           </div>
 
-          <div className="relative mt-12 rounded-2xl border-2 border-[#D4AF37]/30 bg-orange-50 p-6 md:mt-16 md:p-8">
+          <div className="relative mt-12 rounded-lg border-2 border-[#D4AF37]/30 bg-orange-50 p-6 md:mt-16 md:p-8">
             {/* Der Hinweis bleibt sichtbar, aber ohne absolute Überlagerung auf kleinen Bildschirmen. */}
             <div className="mb-4 inline-flex rounded-full bg-[#D4AF37] px-4 py-1 text-[10px] font-black uppercase text-emerald-950 shadow-md">
               Wichtiger Wegweiser für neue Besucher

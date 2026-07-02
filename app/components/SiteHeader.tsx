@@ -16,7 +16,7 @@ export default function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-[100] border-b border-[#D4AF37]/30 bg-[#064e3b] pt-[env(safe-area-inset-top)] text-white shadow-lg">
+    <header className="sticky top-0 z-[100] border-b border-[#D4AF37]/25 bg-[#064e3b] pt-[env(safe-area-inset-top)] text-white shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:px-6">
         <Link href="/" className="group flex min-w-0 items-center gap-3" onClick={() => setIsOpen(false)}>
           <Image
@@ -48,30 +48,30 @@ export default function SiteHeader() {
         <div className="flex items-center gap-2">
           <Link
             href="/#spenden"
-            className="rounded-full bg-[#D4AF37] px-4 py-2 text-xs font-black text-emerald-950 shadow-md transition-all hover:bg-[#C5A028] active:scale-95 md:px-5"
+            className="rounded-lg bg-[#D4AF37] px-4 py-2 text-xs font-black text-emerald-950 transition-colors hover:bg-[#C5A028] md:px-5"
             onClick={() => setIsOpen(false)}
           >
             UNTERSTÜTZEN
           </Link>
-          {/* Handy-Menü: drei Punkte öffnen die Navigation platzsparend auf kleinen Bildschirmen. */}
+          {/* Mobile-Menü: Die drei Linien sind der Button zum Öffnen und Schließen der Navigation. */}
           <button
             type="button"
             aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((value) => !value)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/10 text-white transition-colors hover:bg-white/15 lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-lg border border-white/15 bg-white/10 text-white transition-colors hover:bg-white/15 lg:hidden"
           >
-            <span className="flex items-center gap-1" aria-hidden="true">
-              <span className="h-1.5 w-1.5 rounded-full bg-current" />
-              <span className="h-1.5 w-1.5 rounded-full bg-current" />
-              <span className="h-1.5 w-1.5 rounded-full bg-current" />
+            <span className="flex w-5 flex-col gap-1" aria-hidden="true">
+              <span className="h-0.5 rounded-full bg-current" />
+              <span className="h-0.5 rounded-full bg-current" />
+              <span className="h-0.5 rounded-full bg-current" />
             </span>
           </button>
         </div>
       </nav>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-emerald-950/95 px-4 py-3 shadow-xl lg:hidden">
+        <div className="border-t border-white/10 bg-emerald-950/95 px-4 py-3 shadow-sm lg:hidden">
           {/* Große Trefferflächen machen das Menü auf dem Handy leichter bedienbar. */}
           <div className="mx-auto grid max-w-7xl gap-2">
             {navItems.map((item) => (
@@ -79,7 +79,7 @@ export default function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-widest text-white/85 transition-colors hover:bg-white/10 hover:text-[#D4AF37]"
+                className="rounded-lg px-4 py-3 text-sm font-bold uppercase tracking-widest text-white/85 transition-colors hover:bg-white/10 hover:text-[#D4AF37]"
               >
                 {item.label}
               </Link>

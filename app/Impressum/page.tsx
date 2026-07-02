@@ -1,3 +1,4 @@
+import PageHero from "../components/PageHero";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 
@@ -6,15 +7,10 @@ export default function Impressum() {
     <main className="min-h-screen bg-slate-50 font-sans text-slate-900">
       <SiteHeader />
 
-      <section className="bg-emerald-950 px-6 py-16 text-center text-white">
-        <h1 className="mb-4 text-3xl font-bold uppercase tracking-tight text-[#D4AF37] md:text-5xl font-serif">
-          Impressum
-        </h1>
-        <p className="mx-auto max-w-2xl text-sm text-emerald-100/80">Gesetzliche Pflichtangaben nach § 5 TMG</p>
-      </section>
+      <PageHero eyebrow="Rechtliches" title="Impressum" description="Gesetzliche Pflichtangaben nach § 5 TMG." />
 
       <section className="mx-auto -mt-10 max-w-4xl px-6 py-12">
-        <div className="space-y-10 rounded-2xl border border-slate-100 bg-white p-6 text-sm leading-relaxed text-slate-700 shadow-xl md:p-12">
+        <div className="space-y-10 rounded-lg border border-slate-100 bg-white p-6 text-sm leading-relaxed text-slate-700 shadow-sm md:p-12">
           <div>
             <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-emerald-950">Angaben gemäß § 5 TMG</h2>
             <p className="mb-1 text-lg font-bold text-emerald-900">Bangladesch Islamisches Zentrum e.V.</p>
