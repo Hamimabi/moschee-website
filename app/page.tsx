@@ -73,8 +73,8 @@ export default function Home() {
             <p className="mt-3 text-sm font-medium text-emerald-900/80">Wir gestalten das BIZ Stuttgart neu.</p>
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
               Ein Bauvertrag wurde geschlossen, sodass wir die Renovierung umfangreicher fortsetzen können als
-              ursprünglich geplant. Die Moschee bleibt bis einschließlich <strong>04.07.2026</strong> geschlossen; die
-              voraussichtliche Wiedereröffnung ist ab dem <strong>05.07.2026</strong> geplant.
+              ursprünglich geplant. Die Moschee bleibt <strong>vorübergehend geschlossen</strong>; ein genauer Termin
+              für die Wiedereröffnung kann derzeit noch nicht bekannt gegeben werden.
             </p>
 
             <div className="mt-6">

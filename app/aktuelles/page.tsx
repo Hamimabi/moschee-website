@@ -17,8 +17,8 @@ export default function Aktuelles() {
         description={
           <>
             Die wichtigsten Informationen zur aktuellen Schließung, zur geplanten Wiedereröffnung und zu neuen Meldungen
-            aus der Gemeinde. Die Moschee bleibt bis einschließlich <strong>04.07.2026</strong> geschlossen; die
-            voraussichtliche Wiedereröffnung ist ab dem <strong>05.07.2026</strong> geplant.
+            aus der Gemeinde. Die Moschee bleibt <strong>vorübergehend geschlossen</strong>; ein genauer Termin für die
+            Wiedereröffnung kann derzeit noch nicht bekannt gegeben werden.
           </>
         }
       />
